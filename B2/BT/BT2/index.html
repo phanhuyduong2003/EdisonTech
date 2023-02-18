@@ -14,129 +14,63 @@
                 <h2>THÊM SINH VIÊN</h2>
             </tr>
             <tr>
-                <td style="text-align: left;">Họ tên</td>
-                <td style="text-align: left;"><input type="text"></td>
+                <td style="text-align: left;"><label for="name">Họ tên</label></td>
+                <td style="text-align: left;"><input type="text" name="name" value="Nguyễn Văn A"></td>
             </tr>
             <br>
             <tr>
-                <td style="text-align: left;">Ngày sinh</td>
-                <td style="text-align: left;"><input type="date"></td>
+                <td style="text-align: left;"><label for="birthday">Ngày sinh</label></td>
+                <td style="text-align: left;"><input type="date" name="birthday" value="2000-01-01"></td>
             </tr>
             <br>
             <tr>
-                <td style="text-align: left;"></td>
-                <td style="text-align: left;"></td>
-            </tr>
-            <tr>
-                <td style="text-align: left;">Giới tính</td>
+                <td style="text-align: left;"><label for="gender">Giới tính</label></td>
                 <td style="text-align: left;">
                     <label>
-                        <input type="radio">Nam
-                        <input type="radio">Nữ
+                        <input type="radio" name="gender" value="0" checked>Nam
+                        <input type="radio" name="gender" value="1">Nữ
                     </label>
                 </td>
             </tr>
             <tr>
-                <td style="text-align: left;">Quê quán</td>
+                <td style="text-align: left;"><label for="place">Quê quán</label></td>
                 <td style="text-align: left;">
-                    <select>
+                    <select name="place">
                         <option value="1">An Giang</option>
-                        <option value="2">Bà Rịa – Vũng Tàu</option>
-                        <option value="3">Bắc Giang</option>
-                        <option value="4">Bắc Kạn</option>
-                        <option value="5">Bạc Liêu</option>
-                        <option value="6">Bắc Ninh</option>
-                        <option value="7">Bến Tre</option>
-                        <option value="8">Bình Định</option>
-                        <option value="9">Bình Dương</option>
-                        <option value="10">Bình Thuận</option>
-                        <option value="11">Bình Phước</option>
-                        <option value="12">Cà Mau</option>
-                        <option value="13">Cần Thơ</option>
-                        <option value="14">Cao Bằng</option>
-                        <option value="15">Đà Nẵng</option>
-                        <option value="16">Đắk Lắk</option>
-                        <option value="17">Đắk Nông</option>
-                        <option value="18">Điện Biên</option>
-                        <option value="19">Đồng Nai</option>
-                        <option value="20">Đồng Tháp</option>
-                        <option value="21">Gia Lai</option>
-                        <option value="22">Hà Giang</option>
-                        <option value="23">Hà Nam</option>
-                        <option value="24">Hà Nội</option>
-                        <option value="25">Hà Tĩnh</option>
-                        <option value="26">Hải Dương</option>
-                        <option value="27">Hải Phòng</option>
-                        <option value="28">Hậu Giang</option>
-                        <option value="29">Hòa Bình</option>
-                        <option value="30">Hưng Yên</option>
-                        <option value="31">Khánh Hòa</option>
-                        <option value="32">Kiên Giang</option>
-                        <option value="33">Kon Tum</option>
-                        <option value="34">Lai Châu</option>
-                        <option value="35">Lâm Đồng</option>
-                        <option value="36">Lạng Sơn</option>
-                        <option value="37">Lào Cai</option>
-                        <option value="38">Long An</option>
-                        <option value="39">Nam Định</option>
-                        <option value="40">Nghệ An</option>
-                        <option value="41">Ninh Bình</option>
-                        <option value="42">Ninh Thuận</option>
-                        <option value="43">Phú Thọ</option>
-                        <option value="44">Phú Yên</option>
-                        <option value="45">Quảng Bình</option>
-                        <option value="46">Quảng Nam</option>
-                        <option value="47">Quảng Ngãi</option>
-                        <option value="48">Quảng Ninh</option>
-                        <option value="49">Quảng Trị</option>
-                        <option value="50">Sóc Trăng</option>
-                        <option value="51">Sơn La</option>
-                        <option value="52">Tây Ninh</option>
-                        <option value="53">Thái Bình</option>
-                        <option value="54">Thái Nguyên</option>
-                        <option value="55">Thanh Hóa</option>
-                        <option value="56">Thừa Thiên Huế</option>
-                        <option value="57">Tiền Giang</option>
-                        <option value="58">TP Hồ Chí Minh</option>
-                        <option value="59">Trà Vinh</option>
-                        <option value="60">Tuyên Quang</option>
-                        <option value="61">Vĩnh Long</option>
-                        <option value="62">Vĩnh Phúc</option>
-                        <option value="63">Yên Bái</option>
                     </select>
                 </td>
             </tr>
             <tr>
-                <td style="text-align: left;">Địa chỉ</td>
-                <td style="text-align: left;"><input type="text"></td>
+                <td style="text-align: left;"><label for="address">Địa chỉ</label></td>
+                <td style="text-align: left;"><input type="text" name="address"></td>
             </tr>
             <tr>
                 <td style="text-align: left;">Sở thích</td>
                 <td style="text-align: left;">
                     <label>
-                        <input type="checkbox">Thể thao
-                        <input type="checkbox">Du lịch
-                        <input type="checkbox">Phim ảnh
-                        <input type="checkbox">Ẩm thực
+                        <input type="checkbox" value="0">Thể thao
+                        <input type="checkbox" value="1" checked>Du lịch
+                        <input type="checkbox" value="2" checked>Phim ảnh
+                        <input type="checkbox" value="3">Ẩm thực
                     </label>
                 </td>
             </tr>
             <tr>
-                <td style="text-align: left;">Màu yêu thích</td>
-                <td style="text-align: left;"><input type="color"></td>
+                <td style="text-align: left;"><label for="color">Màu yêu thích</label></td>
+                <td style="text-align: left;"><input type="color" name="color" value="#ff0000"></td>
             </tr>
             <tr>
-                <td style="text-align: left;">Email</td>
-                <td style="text-align: left;"><input type="email"></td>
+                <td style="text-align: left;"><label for="email">Email</label></td>
+                <td style="text-align: left;"><input type="email" name="email"></td>
             </tr>
             <tr>
-                <td style="text-align: left;">Trang Facebook</td>
-                <td style="text-align: left;"><input type="url"></td>
+                <td style="text-align: left;"><label for="facebook">Trang Facebook</label></td>
+                <td style="text-align: left;"><input type="url" name="facebook"></td>
             </tr>
             <tr>
-                <td style="text-align: left;">Lớp</td>
+                <td style="text-align: left;"><label for="class">Lớp</label></td>
                 <td style="text-align: left;">
-                    <select>
+                    <select name="class">
                         <option value="1">Lớp CNTT khoá 8</option>
                         <option value="2">Lớp CNTT khoá 9</option>
                         <option value="2">Lớp CNTT khoá 10</option>
@@ -145,24 +79,24 @@
                 </td>
             </tr>
             <tr>
-                <td style="text-align: left;">Tên đăng nhập</td>
-                <td style="text-align: left;"><input type="text"></td>
+                <td style="text-align: left;"><label for="username"></label> Tên đăng nhập</td>
+                <td style="text-align: left;"><input type="text" name="username"></td>
             </tr>
             <tr>
-                <td style="text-align: left;">Mật khẩu</td>
-                <td style="text-align: left;"><input type="password"></td>
+                <td style="text-align: left;"><label for="pass"></label> Mật khẩu</td>
+                <td style="text-align: left;"><input type="password" name="pass"></td>
             </tr>
             <tr>
-                <td style="text-align: left;">Ảnh thẻ</td>
-                <td style="text-align: left;"><input type="file"></td>
+                <td style="text-align: left;"><label for="image"></label> Ảnh thẻ</td>
+                <td style="text-align: left;"><input type="file" name="image"></td>
             </tr>
             <tr>
-                <td style="text-align: left;">Mô tả</td>
-                <td style="text-align: left;"><input type="text"></td>
+                <td style="text-align: left;"><label for=""></label> Mô tả</td>
+                <td style="text-align: left;"><input type="text" placeholder="Nhập nội dung vào đây!"></td>
             </tr>
             <tr>
-                <td style="text-align: left;"><input type="submit" value="Gửi"></td>
-                <td style="text-align: left;"><input type="reset" value="Nhập lại"></td>
+                <td style="text-align: left;"><button type="submit">Gửi</button></td>
+                <td style="text-align: left;"><button type="reset">Nhập lại</button></td>
             </tr>
             <br>
         </table>
