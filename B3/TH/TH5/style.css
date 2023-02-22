@@ -1,0 +1,38 @@
+.container {
+    background-color: antiquewhite;
+    border-radius: 5px;
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    float: left;
+}
+.image {
+    float: left;
+    width: 30%;
+}
+.img {
+    max-width: 90%;
+    padding: 70px;
+    border-radius: 5px;
+    background-color: gainsboro;
+    float: left;
+}
+.profile {
+    float: left;
+    width: 70%;
+}
+.info {
+    margin-top: 10px;
+    padding-left: 0px;
+    list-style-type: none;
+}
+.button {
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: white;
+    border-color: beige;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
