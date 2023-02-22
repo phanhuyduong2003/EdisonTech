@@ -1,0 +1,56 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    float: left;
+}
+.nav {
+    background-color: black;
+    overflow: hidden;
+    float: left;
+    top: 0;
+    width: 100%;
+}
+.nav a {
+    float: left;
+    text-decoration: none;
+    display: grid;
+    color: white;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+.nav a:hover {
+    background: #ddd;
+    color: black;
+}
+.content {
+    width: 1024px;
+    margin: 0 auto;
+    height: 300px;
+}
+.news {
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+.post {
+    float: left;
+    width: 100%;
+}
+.image {
+    text-align: center;
+    width: 80%;
+}
+.list {
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+.name {
+    float: left;
+}
+.hr {
+    float: left;
+    width: 80%;
+    border: 1px solid #dbd8d8;
+}
