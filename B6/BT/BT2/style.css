@@ -1,0 +1,18 @@
+body {
+    font-size: 20px;
+}
+.title {
+    font-weight: bold;
+}
+input {
+    width: 80px;
+}
+#m_money,
+#s_money,
+#i_money {
+    border: 1px solid #4f4f4f;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 80px;
+    margin: 0;
+}

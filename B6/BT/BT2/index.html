@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="calc">
+        <table id="table">
+            <form action="" id="form">
+                <p class="title">Nhập thông tin khoản vay</p>
+                <tr>
+                    <td>1&rpar; <label for="money">Số tiền</label></td>
+                    <td><input type="number" name="money" id="money"></td>
+                </tr>
+                <tr>
+                    <td>2&rpar; <label for="interest">Lãi suất hàng năm (%)</label></td>
+                    <td><input type="number" step="any" min="0" name="interest" id="interest"></td>
+                </tr>
+                <tr>
+                    <td>3&rpar; <label for="time">Thời gian trả (năm)</label></td>
+                    <td><input type="number" name="time" id="time"></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" id="btn">Tính</button></td>
+                </tr>
+                    <p class="title">Thông tin thanh toán</p>
+                    <tr>
+                        <td>4&rpar; Số tiền trả hàng tháng</td>
+                        <td>
+                            <p id="m_money"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5&rpar; Tổng số tiền phải trả</td>
+                        <td>
+                            <p id="s_money"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6&rpar; Tổng số lãi phải trả</td>
+                        <td>
+                            <p id="i_money"></p>
+                        </td>
+                    </tr>
+            </form>
+        </table>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
