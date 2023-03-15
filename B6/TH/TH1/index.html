@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành 1 - Thêm Edit</title>
+</head>
+
+<body>
+    <h1>Todo list</h1>
+    <form action="" id="todo-form">
+        <input type="text" placeholder="Add todo" id="todo" name="todo">
+        <button type="submit" id="btn">Add</button>
+    </form>
+    <ul>
+    </ul>
+</body>
+<script>
+    const todos = [];
+    let todoIndex = null
+    const todoList = document.querySelector("ul")
+    const form = document.querySelector("#todo-form")
+    form.addEventListener("submit", function (event) {
+        event.preventDefault()
+        const input = form.elements['todo']
+        const value = input.value
+        if (value.trim() === '') {
+            alert('Input todo')
+        } else {
+            if (todoIndex === null) {
+                todos.push(value)
+            } else {
+                todos[todoIndex] = value
+            }
+            input.value = ""
+            const button = document.querySelector('#btn')
+            button.innerText = 'Add'
+            todoIndex = null
+
+            render()
+        }
+    })
+    function handleDelete(index) {
+        todos.splice(index, 1)
+        render()
+    }
+    function handleEdit(index) {
+        const input = form.elements['todo']
+        input.value = todos[index]
+        const button = document.querySelector('#btn')
+        button.innerText = 'Edit'
+        todoIndex = index
+    }
+    function render() {
+        const todoElement = todos.map(function (todo) {
+            return `
+                <li>
+                    <span>${todo}</span>
+                    <button id="edit">Edit</button>
+                    <button id="delete">Delete</button>
+                </li>
+            `
+        })
+        todoList.innerHTML = todoElement.join("")
+        const deleteButtons = document.querySelectorAll("#delete")
+        const editButtons = document.querySelectorAll("#edit")
+        deleteButtons.forEach(function (deleteButton, index) {
+            deleteButton.addEventListener('click', function () {
+                handleDelete(index)
+            })
+        })
+        editButtons.forEach(function (editButton, index) {
+            editButton.addEventListener('click', function () {
+                handleEdit(index)
+            })
+        })
+    }
+    function initialApp() {
+        render();
+    }
+    initialApp();
+</script>
+
+</html>
