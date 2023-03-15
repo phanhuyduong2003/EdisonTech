@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành 2 - Mouse Click</title>
+</head>
+
+<body>
+    <button id="btn">Click me with any mouse button</button>
+    <p id="message"></p>
+</body>
+<script>
+    btn.addEventListener('contextmenu', function (event) {
+        event.preventDefault();
+        console.log(222);
+    })
+    btn.addEventListener('mouseup', function (event) {
+        let m = document.querySelector('#message')
+        switch (event.button) {
+            case 0:
+                m.textContent = 'Left mouse'
+                break;
+            case 1:
+                m.textContent = 'Middle mouse'
+                break;
+            case 2:
+                m.textContent = 'Right mouse'
+                break;
+            case 3:
+                m.textContent = 'Previous mouse'
+                break;
+            case 4:
+                m.textContent = 'Next mouse'
+                break;
+            default:
+                m.textContent = `Unknown mouse: ${event.button}`
+                break;
+        }
+    })
+</script>
+
+</html>

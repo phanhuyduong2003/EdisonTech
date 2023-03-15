@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành 2 - Scroll Event</title>
+    <style>
+        #scroll {
+            height: 200px;
+            width: 200px;
+            overflow: auto;
+            background-color: #f0db4f
+        }
+
+        #scroll p {
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <div id="scroll">
+        <p>Demo</p>
+    </div>
+    <div id="control">
+        <button id="left">Scroll Left</button>
+        <button id="top">Scroll Top</button>
+    </div>
+    <script>
+        const control = document.querySelector('#control')
+        control.addEventListener('click', function (event) {
+        const div = document.querySelector('#scroll')
+        const target = event.target
+        switch (target.id) {
+            case 'left':
+                div.scrollLeft += 20
+                break;
+            case 'top':
+                div.scrollTop += 20
+                break;
+            default:
+                break;
+        }
+        })
+    </script>
+</body>
+
+</html>
