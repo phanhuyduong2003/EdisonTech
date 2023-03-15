@@ -1,0 +1,65 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    font-weight: 500;
+}
+.container {
+    background-color: cyan;
+    border-radius: 5px;
+    width: 400px;
+}
+form {
+    padding: 40px;
+    max-width: 450px;
+}
+label {
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+input {
+    height: 40px;
+    vertical-align:middle;
+    border-radius: 3px;
+    border: 0;
+    font-size: 18px;
+    padding-left: 10px;
+}
+input::placeholder {
+    padding: 10px;
+}
+.gender label {
+    font-weight: 400;
+}
+.field {
+    padding-bottom: 10px;
+}
+.submit {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+button {
+    background-color: #2185D0;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.result {
+    background-color: aliceblue;
+    border-radius: 4px;
+    height: 100px;
+    padding: 1px;
+}
+p {
+    text-align: center;
+}
+.log {
+    font-weight: bold;
+}
