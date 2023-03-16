@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành 3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <section class="top-banner">
+        <div class="container">
+            <h1 class="heading">Weather App</h1>
+            <form id="form">
+                <input type="text" id="input" placeholder="Search for a city" autofocus>
+                <button type="submit">SUBMIT</button>
+                <span class="msg"></span>
+            </form>
+        </div>
+    </section>
+    <section class="ajax-section">
+        <div class="container">
+            <ul class="cities"></ul>
+        </div>
+    </section>
+
+    <li class="city">
+        <h2 class="city-name" data-name="...">
+            <span>...</span>
+            <sup>...</sup>
+        </h2>
+        <span class="city-temp">...<sup>°C</sup></span>
+    </li>
+    <script src="script.js"></script>
+</body>
+
+</html>

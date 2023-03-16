@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <h1>Registered Employee</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ABC</td>
+                <td>XYZ</td>
+                <td>abc@xyz.com</td>
+            </tr>
+            <tr>
+                <td>ABC</td>
+                <td>XYZ</td>
+                <td>abc@xyz.com</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    let employees = []
+    const tbodyElement = document.querySelector('tbody')
+    function getEmployees() {
+        axios
+            .get('https://jsonplaceholder.typicode.com/users')
+            .then(function (res) {
+                employees = res.data
+                render()
+        })
+    }
+    function render() {
+        const trElements = employees.map(function (employee) {
+            return `
+            <tr>
+                <td>${employee.name}</td>
+                <td>${employee.username}</td>
+                <td>${employee.email}</td>
+            </tr>
+            `
+        })
+        tbodyElement.innerHTML = trElements.join('')
+    }
+    getEmployees()
+    render()
+</script>
+</html>
