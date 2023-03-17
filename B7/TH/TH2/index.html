@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,26 @@
     <title>Thực hành 2</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
-    <form action="">
-        <input type="text" name="todo" id="todo" placeholder="Enter">
-        <button onclick="handleSubmitForm()">Add</button>
+    <form action="" id="form">
+        <input type="text" name="todo" id="input" placeholder="Enter">
+        <button id="btn">Add</button>
     </form>
     <div id="out"></div>
-    <button id="next" onclick="handleNext()">Next</button>
-    <button id="back" onclick="handleBack()">Back</button>
-
 </body>
 <script>
     let todos = []
     const outElement = document.querySelector('#out')
-    let limit = 5
+    let limit = 6
     let page = 1
     function getTodos() {
-        axios.get(`https://jsonplaceholder.typicode.com/todos?_limit=${limit}&_page=${page}`).then(function (res) {
-            todos = res.data
-            render()
-        })
+        axios
+            .get(`https://jsonplaceholder.typicode.com/todos?_limit=${limit}`)
+            .then(function (res) {
+                todos = res.data
+                render()
+            })
     }
     function render() {
         const ulElement = todos.map(function (todo) {
@@ -38,30 +39,19 @@
         })
         outElement.innerHTML = ulElement.join('')
     }
-    function handleNext() {
-        if (todos.length < limit) {
-            return
-        }
-        page += 1
-        getTodos()
-    }
-    function handleBack() {
-        if (page == 1) {
-            return
-        }
-        page -= 1
-        getTodos()
-    }
     function addTodo(todo) {
-        axios.post('https://jsonplaceholder.typicode.com/todos', todo).then(function (res) {
-            if (res.data) {
-                getTodos()
-            }
-        })
+        axios
+            .post('https://jsonplaceholder.typicode.com/todos', todo)
+            .then(function (res) {
+                if (res.data) {
+                    getTodos()
+                }
+            })
     }
-    function handleSubmitForm(event) {
+    const form = document.querySelector("form")
+    form.addEventListener('submit', function (event) {
         event.preventDefault()
-        const input = document.querySelector('input')
+        const input = document.querySelector('#input')
         const value = input.value.trim()
         if (!value) {
             return alert('Enter task')
@@ -71,7 +61,11 @@
             title: value,
             completed: false,
         })
-    }
+        const todoList = document.querySelector('ul')
+        todoList.innerHTML = `<li>${value}</li>`
+        render()
+    })
     getTodos()
 </script>
+
 </html>
