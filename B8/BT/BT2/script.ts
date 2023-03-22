@@ -5,6 +5,10 @@ class Todo {
         this.date = date
         this.works = works
     }
+    addTodo() {
+        console.log(`Ngay ${this.date} co cong viec ${this.works}`);
+        
+    }
 }
 class TodoList {
     todoList: Todo[] = []
@@ -22,11 +26,12 @@ class TodoList {
     }
 }
 
-let todoList = new TodoList()
+let todos = new TodoList()
 let todo1 = new Todo(22, ['Studying', ' Meeting'])
-let todo2 = new Todo(23, ['Shopping', ' Party'])
-let todo3 = new Todo(24, ['Camping', ' Fishing'])
+let todo2 = new Todo(22, ['Shopping', ' Party'])
+let todo3 = new Todo(23, ['Camping', ' Fishing'])
 
-todoList.addTodo(todo1)
-todoList.addTodo(todo2)
-todoList.addTodo(todo3)
+todos.addTodo(todo1)
+todos.addTodo(todo2)
+todos.addTodo(todo3)
+console.log(todos.todoList)
