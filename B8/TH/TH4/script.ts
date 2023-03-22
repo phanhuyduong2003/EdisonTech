@@ -28,11 +28,14 @@ class Customer {
         }
     }
 }
+
 let shirt = new Product('T-Shirt', 100000, 30)
-shirt.addProduct(10)
-console.log(shirt.amount, 'Amount product');
 let customer = new Customer('Duong', 0)
+
+shirt.addProduct(10)
 customer.buyProduct(shirt, 5)
+
+console.log(shirt.amount, 'Amount product');
 console.log(customer.quantityProduct, 'Quantity of product customer');
 console.log(shirt.amount, 'Amount product after customer buy');
 

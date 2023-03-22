@@ -58,6 +58,8 @@ class Author extends User {
         return this.numOfPost
     }
 }
+
 let author = new Author('Athony', 'athony123', '123456', 'athony.dev@gmail.com')
+
 console.log(author.email);
 author.login('athony123', '123456')
