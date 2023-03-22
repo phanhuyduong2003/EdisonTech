@@ -23,9 +23,9 @@ class TodoList {
 }
 
 let todos = new TodoList()
-let todo1 = new Todo(22, ['Studying', ' Meeting'])
-let todo2 = new Todo(22, ['Shopping', ' Party'])
-let todo3 = new Todo(23, ['Camping', ' Fishing'])
+let todo1 = new Todo(new Date('2023-03-22').getDate(), ['Studying', ' Meeting'])
+let todo2 = new Todo(new Date('2023-03-22').getDate(), ['Shopping', ' Party'])
+let todo3 = new Todo(new Date('2023-03-23').getDate(), ['Camping', ' Fishing'])
 
 todos.addTodo(todo1)
 todos.addTodo(todo2)
