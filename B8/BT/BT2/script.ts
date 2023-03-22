@@ -5,10 +5,6 @@ class Todo {
         this.date = date
         this.works = works
     }
-    addTodo() {
-        console.log(`Ngay ${this.date} co cong viec ${this.works}`);
-        
-    }
 }
 class TodoList {
     todoList: Todo[] = []
