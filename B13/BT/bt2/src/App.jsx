@@ -9,12 +9,12 @@ function App() {
       setTime(new Date());
     }, 5000);
     return () => {
-      clearTimeout(timer)
-    }
+      clearTimeout(timer);
+    };
   }, []);
   return (
     <div>
-      <div>Current time: { time.toLocaleTimeString()}</div>
+      <div>Current time: {time.toLocaleTimeString()}</div>
     </div>
   );
 }
