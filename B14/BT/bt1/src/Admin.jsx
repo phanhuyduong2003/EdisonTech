@@ -10,8 +10,8 @@ const Admin = ({ isAdmin, children }) => {
     }, 1000);
     return () => clearInterval(interValid);
   }, [timer]);
+  const navigate = useNavigate();
   useEffect(() => {
-    const navigate = useNavigate();
     if (!isAdmin && timer === 0) {
       navigate("/");
     }
