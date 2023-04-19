@@ -13,7 +13,7 @@ function render() {
     const mealDB = meals.map(function (food) {
         return `
             <li>
-            <img src='${food?.strMealThumb}'>
+            <img src='${food.strMealThumb}'>
             <p>${food.strMeal}</p>
             <hr>
             </li>

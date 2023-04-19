@@ -13,11 +13,10 @@ function render() {
     const moviesElement = movies.map(function (movie) {
         return `
         <div class="col-4 col-lg-3 col-xl-2 p-1">
-            <img src="${IMG_URL + movie?.poster_path}" class="img-fluid" >
+            <img src="${IMG_URL + movie.poster_path}" class="img-fluid" >
         </div>
         `
     })
     moviesDiv.innerHTML = moviesElement.join('')
 }
 getMovies()
-render()

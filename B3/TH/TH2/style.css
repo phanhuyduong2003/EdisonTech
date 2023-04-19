@@ -18,13 +18,13 @@ body {
 }
 .navbar a {
     float: left;
-    display: block;
+    display: flex;
     color: white;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
 }
-.navbar a.right {
+.navbar #right {
     float: right;
 }
 .navbar a:hover {
@@ -35,7 +35,7 @@ body {
     display: flex;
 }
 .side {
-    flex: 30%;
+    flex: 50%;
     background-color: #f1f1f1;
     padding: 20px;
 }
@@ -46,6 +46,6 @@ body {
 }
 .fakeimg {
     background-color: #aaa;
-    width: 100%;
+    width: 200px;
     padding: 20px;
 }

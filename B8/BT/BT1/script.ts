@@ -17,7 +17,6 @@ class NoteList {
     addNote(note: Note) {
         this.note.push(note)
         console.log(`Note added to list: ${note.title}\nContent: ${note.content}\n`);
-        
     }
 }
 
@@ -27,4 +26,4 @@ let note2 = new Note('To do tomorrow', 'Meeting, Studying')
 
 noteList.addNote(note1)
 noteList.addNote(note2)
-console.log(noteList.note);
+console.log(noteList.note)

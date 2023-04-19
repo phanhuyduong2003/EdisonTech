@@ -1,8 +1,8 @@
 function checkUsersValid(goodUsers) {
   return function allUsersValid(submittedUsers) {
-    return submittedUsers.every(function (submittedUsers) {
-      return goodUsers.some(function (goodUsers) {
-        return goodUsers.id == submittedUsers.id
+    return submittedUsers.every(function (submitUser) {
+      return goodUsers.some(function (goodUser) {
+        return submitUser.id === goodUser.id;
       })
     })
   };

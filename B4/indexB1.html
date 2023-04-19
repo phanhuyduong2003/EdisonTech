@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" nonce="f88d8b0758854799a4089733f90"
+        src="//injections.adguard.org?ts=1677586607804&amp;type=content-script&amp;dmn=zalo-file-dl22.zdn.vn&amp;pth=%2F9b36d017c5dd2b8372cc%2F7974683397202833118&amp;app=msedge.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .aside {
+            transition: unset;
+        }
+
+        .aside:not(.show)+.content {
+            width: 100%;
+        }
+
+        .aside:not(.show)+.footer {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid h-100 bg-light">
+        <div class="row g-0 h-100">
+            <div class="col-12">
+                <div class="row g-0 h-100">
+                    <div class="col-2 aside collapse px-3 py-4 px-4" id="navbarToggleExternalContent"
+                        style="background-color: #343a40;">
+                        <div class="row g-2">
+                            <div class="col-12 border-bottom">
+                                <div class="row pb-2">
+                                    <div class="col-5">
+                                        <img src="https://pixlr.com/images/index/remove-bg.webp" alt=""
+                                            class="rounded-circle" style="width: 50px; height: 50px;">
+                                    </div>
+                                    <div class="col-7 d-flex align-items-center">
+                                        <p class="fs-5 text-white">Admin</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row pt-3 pb-3 border-bottom">
+                                    <div class="col-5">
+                                        <img src="https://pixlr.com/images/index/remove-bg.webp" class="rounded-circle"
+                                            style="width: 50px; height: 50px;" alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <p class="fs-5 text-white">Nguyen Thi B</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row pt-3 pb-3">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control bg-light" placeholder="Search"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2"
+                                            style="background-color: #343a40;">
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-search mx-3" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 bg-primary rounded px-2">
+                                <div class="row pt-3 pb-3 d-flex justify-content-between">
+                                    <div class="col-10 col-md-10 d-flex align-items-center gap-2">
+                                        <span class="material-symbols-outlined text-white">
+                                            speed
+                                        </span>
+                                        <a href="#" class="text-white">Trang chu</a>
+                                    </div>
+                                    <div class="align-content-center col-2 d-flex justify-content-end">
+                                        <span class="material-symbols-outlined text-white">
+                                            chevron_left
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 rounded px-2">
+                                <div class="row pt-3 pb-3 d-flex justify-content-between">
+                                    <div class="col-10 col-md-10 d-flex align-items-center gap-2">
+                                        <span class="material-symbols-outlined text-white">
+                                            pie_chart
+                                        </span>
+                                        <a href="#" class="text-white">Quan ly san pham</a>
+                                    </div>
+                                    <div class="align-content-center col-2 d-flex justify-content-end">
+                                        <span class="material-symbols-outlined text-white">
+                                            expand_more
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 rounded px-2">
+                                <div class="row pt-3 pb-3 d-flex justify-content-between">
+                                    <div class="col-12 d-flex align-items-center gap-2">
+                                        <span class="material-symbols-outlined text-white">
+                                            circle
+                                        </span>
+                                        <a href="#" class="text-white">Danh sach</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 content bg-light h-100">
+                        <div class="d-flex bg-light bg-primary align-items-center justify-content-between">
+                            <div class="left d-flex bg-light bg-primary align-items-center gap-3 px-2">
+                                <nav class="navbar navbar-light">
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarToggleExternalContent"
+                                        aria-controls="navbarToggleExternalContent" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                </nav>
+                                <a href="#" class="text-dark">Trang chu</a>
+                                <a href="#" class="text-dark">Dang xuat</a>
+                            </div>
+                            <div class="right">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-search mx-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="row mt-3 ps-2 g-0">
+                            <div class="col-md-12 mb-3">
+                                <div class="g-0 col-md-12 d-flex justify-content-between align-items-center">
+                                    <h2>Them moi san pham</h2>
+                                    <a class="me-3" href="#">Trang chu</a>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row gy-5">
+                                    <div class="col-9">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row g-0 border rounded mb-3">
+                                                    <div class="col-12" style="background-color: white;">
+                                                        <div class="form-group">
+                                                            <div class="form-title border-bottom p-3 fw-bold"
+                                                                style="font-size: 20px;">
+                                                                <span>Thong tin san pham</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-content p-3">
+                                                            <div>
+                                                                <label for="productNameInput" class="fw-bold">Ten san
+                                                                    pham
+                                                                    (*)</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="productNameInput" aria-describedby="produtName">
+                                                            </div>
+                                                            <div>
+                                                                <label for="productNameInput" class="fw-bold">Mo ta ngan
+                                                                    (*)</label>
+                                                                <textarea name="shortDescription" id="shortDescription"
+                                                                    class="form-control" cols="30" rows="5"></textarea>
+                                                            </div>
+                                                            <div>
+                                                                <label for="moreInformation" class="fw-bold">Chi tiet
+                                                                    (*)</label>
+                                                                <div class="summernote"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row g-0 border rounded mb-3">
+                                                    <div class="col-12" style="background-color: white;">
+                                                        <div class="form-group">
+                                                            <div class="form-title border-bottom p-3 fw-bold"
+                                                                style="font-size: 20px;">
+                                                                <span>Du lieu san pham</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-content p-3">
+                                                            <div class="d-flex flex-direction-column my-2">
+                                                                <label for="productNameInput" class="fw-bold">Gia
+                                                                    ban(*)(VND)</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="productNameInput" aria-describedby="produtName">
+                                                            </div>
+                                                            <div class="d-flex gap-4 my-2">
+                                                                <label for="productNameInput" class="fw-bold">Tinh
+                                                                    trang(*)</label>
+                                                                <select class="form-select"
+                                                                    aria-label="Default select example">
+                                                                    <option selected>Open this select menu</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="row container-fluid">
+                                            <div class="col">
+                                                <div class="row g-0 border rounded mb-3">
+                                                    <div class="col-12" style="background-color: white;">
+                                                        <div class="form-group">
+                                                            <div class="form-title border-bottom p-3 fw-bold"
+                                                                style="font-size: 20px;">
+                                                                <span>The loai san pham</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-content p-3">
+                                                            <div>
+                                                                <label for="productNameInput" class="fw-bold">Chon the
+                                                                    loai(*)</label>
+                                                                <select class="form-select my-2"
+                                                                    aria-label="Default select example">
+                                                                    <option selected>Open this select menu</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row container-fluid">
+                                            <div class="col">
+                                                <div class="row g-0 border rounded mb-3">
+                                                    <div class="col-12" style="background-color: white;">
+                                                        <div class="form-group">
+                                                            <div class="form-title border-bottom p-3 fw-bold"
+                                                                style="font-size: 20px;">
+                                                                <span>Anh dai dien</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-content p-3">
+                                                            <div>
+                                                                <label for="productNameInput" class="fw-bold">Chon
+                                                                    anh(*)</label>
+                                                                <p>Dinh dang: jpg, png, jpeg, gif, svg - Kich co <
+                                                                        2MB</p>
+                                                                        <div class="input-group mb-3">
+                                                                            <label class="input-group-text"
+                                                                                for="inputGroupFile01">Upload</label>
+                                                                            <input type="file" class="form-control"
+                                                                                id="inputGroupFile01">
+                                                                        </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row container-fluid">
+                                            <div class="col-12">
+                                                <div class="row g-1">
+                                                    <div class="col-5">
+                                                        <button class="btn btn-primary w-100">Luu</button>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button class="w-100 btn btn-secondary">Huy</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-0 footer ps-2">
+                        <footer class="col-12 my-4">
+                            <p class="text-muted text-center">Copyright © 2022 Company</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.summernote').summernote();
+        });
+    </script>
+</body>
+
+</html>
+<!-- <div class="border">
+    <div class="summernote"></div>
+</div>
