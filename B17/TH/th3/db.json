@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Hello"
+    },
+    {
+      "id": 2,
+      "name": "Cee"
+    },
+    {
+      "id": 3,
+      "name": "Dương"
+    },
+    {
+      "id": 4,
+      "name": "Hoàng"
+    },
+    {
+      "id": 5,
+      "name": "Mạnh"
+    },
+    {
+      "id": 6,
+      "name": "Hải"
+    }
+  ]
+}
